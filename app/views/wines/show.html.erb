@@ -1,0 +1,10 @@
+<h2><%= @wine.name %></h2>
+<p><%= @wine.millesime %></p>
+<p><%= @wine.rating %></p>
+<p><%= @wine.description %></p>
+<%= link_to "Back", all_wines_url %>
+<%= link_to "Edit", edit_wine_path(@wine) %>
+<%= link_to "Delete",
+            wine_path(@wine),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

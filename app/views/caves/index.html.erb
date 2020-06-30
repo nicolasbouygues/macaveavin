@@ -1,0 +1,7 @@
+<h1>Caves#index</h1>
+<ul>
+  <% @caves.each do |cave| %>
+    <li><%= link_to cave.name, cave_path(cave) %></li>
+  <% end %>
+</ul>
+<%= link_to "Nouvelle cave", new_cave_path %>

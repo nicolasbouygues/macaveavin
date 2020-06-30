@@ -1,0 +1,7 @@
+<h1>Wines#index</h1>
+<ul>
+  <% @wines.each do |wine| %>
+    <li><%= link_to wine.name, user_wine_path(wine) %></li>
+  <% end %>
+</ul>
+<%= link_to "Nouveau vin", new_user_wine_path %>

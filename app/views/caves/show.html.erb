@@ -1,0 +1,7 @@
+<h2><%= @cave.name %></h2>
+<%= link_to "Back", all_caves_url %>
+<%= link_to "Edit", edit_cave_path(@cave) %>
+<%= link_to "Delete",
+            cave_path(@cave),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
