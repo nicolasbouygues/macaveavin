@@ -1,0 +1,8 @@
+<h1>Cellars#index</h1>
+<ul>
+  <% @cellars.each do |cellar| %>
+    <li><%= link_to cellar.name, cellar_path(cellar) %></li>
+  <% end %>
+</ul>
+<%= link_to "Créer une nouvelle cave", new_cellar_path  %>
+

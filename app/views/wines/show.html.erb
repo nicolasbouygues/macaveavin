@@ -1,8 +1,9 @@
 <h2><%= @wine.name %></h2>
+<p><%= @wine.domaine %></p>
 <p><%= @wine.millesime %></p>
-<p><%= @wine.rating %></p>
-<p><%= @wine.description %></p>
-<%= link_to "Back", all_wines_url %>
+<p>A boire avant<%= @wine.millesime + @wine.garde %></p>
+<p><%= @wine.rating  %>/5</p>
+<%= link_to "Back", :back %>
 <%= link_to "Edit", edit_wine_path(@wine) %>
 <%= link_to "Delete",
             wine_path(@wine),

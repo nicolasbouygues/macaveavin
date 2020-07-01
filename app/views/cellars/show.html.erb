@@ -1,0 +1,16 @@
+<h2><%= @cellar.name %></h2>
+<% @cellar.wines.each do |wine| %>
+<h3><%= link_to wine.name, wine_path(wine)  %></h3>
+<h3><%= wine.domaine  %></h3>
+<h3><%= wine.millesime  %></h3>
+<h3>A boire avant: <%= wine.millesime + wine.garde  %></h3>
+<h3><%= wine.rating  %></h3>
+<% end %>
+
+<%= link_to "Back", cellars_url %>
+<%= link_to "Edit", edit_cellar_path(@cellar) %>
+<%= link_to "Nouveau vin", new_cellar_wine_path(@cellar) %>
+<%= link_to "Delete",
+            cellar_path(@cellar),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

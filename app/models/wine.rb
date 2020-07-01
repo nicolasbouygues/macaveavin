@@ -1,3 +1,4 @@
 class Wine < ApplicationRecord
-  has_many :caves
+  belongs_to :cellar
+  belongs_to :user
 end

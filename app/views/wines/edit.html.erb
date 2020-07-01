@@ -1,8 +1,12 @@
 <%= form_for(@wine) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.label :domaine %>
+  <%= f.text_field :domaine %>
   <%= f.label :millesime %>
   <%= f.number_field :millesime %>
+  <%= f.label :garde %>
+  <%= f.number_field :garde %>
   <%= f.label :rating %>
   <%= f.number_field :rating %>
   <%= f.submit %>
